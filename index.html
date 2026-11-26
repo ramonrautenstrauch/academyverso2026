@@ -1,10 +1,154 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
   <title>Academyverso 2026</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: #ffffff;
+      text-align: center;
+      background:
+        radial-gradient(circle at 15% 20%, #312e81 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, #581c87 0%, transparent 40%),
+        #0f172a;
+    }
+
+    main {
+      max-width: 900px;
+      width: 100%;
+      animation: aparecer 1s ease-out;
+    }
+
+    .etiqueta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      margin-bottom: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.06);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .punto {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 15px #34d399;
+      animation: pulso 2s infinite;
+    }
+
+    h1 {
+      font-size: clamp(36px, 8vw, 90px);
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      line-height: 1.1;
+      background: linear-gradient(120deg, #ffffff, #c4b5fd, #67e8f9);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .linea {
+      width: 80px;
+      height: 4px;
+      margin: 32px auto;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #818cf8, #22d3ee);
+    }
+
+    .mensaje {
+      font-size: clamp(22px, 4vw, 34px);
+      line-height: 1.5;
+      font-weight: 300;
+      color: #e2e8f0;
+    }
+
+    .fecha {
+      margin-top: 24px;
+      font-size: clamp(14px, 3vw, 18px);
+      color: #a5b4fc;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .pie {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    @keyframes pulso {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <p>Esto lo vamos a construir en directo el 26 de noviembre desde Tajamar</p>
+
+  <main>
+    <div class="etiqueta">
+      <span class="punto"></span>
+      Construyendo en directo
+    </div>
+
+    <h1>Academyverso 2026</h1>
+
+    <div class="linea"></div>
+
+    <p class="mensaje">
+      Esto lo vamos a construir en directo.
+    </p>
+
+    <p class="fecha">
+      26 de noviembre · Tajamar
+    </p>
+
+    <p class="pie">
+      Lo mejor está por llegar. 🚀
+    </p>
+  </main>
+
 </body>
 </html>
+
